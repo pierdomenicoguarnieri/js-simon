@@ -68,7 +68,7 @@ function arrayCheck(inputArray, outputMessage){
       output += `${inputArray[i]} `;
       outputMessage.innerHTML = `Hai indovinato ${guessedNumbers} numeri: "${output}" i numeri generati erano: ${generatedNumbers}`
     }else if(guessedNumbers === 0){
-      output =`Non hai indovinato nessun numero. I numeri generati erano: ${getRandomNumber}`
+      output =`Non hai indovinato nessun numero.`
       outputMessage.innerHTML = `${output}`
     }
   }
