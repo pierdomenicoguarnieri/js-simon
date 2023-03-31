@@ -59,3 +59,17 @@ function numbersDisappear(numbersContainer){
 function inputAppear(inputAppear){
   inputAppear.classList.remove("opacity-0");
 }
+
+function arrayCheck(inputArray, outputMessage){
+  let output = "";
+  for(let i = 0; i < inputArray.length; i ++){
+    if(generatedNumbers.includes(inputArray[i])){
+      guessedNumbers++;
+      output += `${inputArray[i]} `;
+      outputMessage.innerHTML = `Hai indovinato ${guessedNumbers} numeri: "${output}" i numeri generati erano: ${generatedNumbers}`
+    }else if(guessedNumbers === 0){
+      output =`Non hai indovinato nessun numero. I numeri generati erano: ${getRandomNumber}`
+      outputMessage.innerHTML = `${output}`
+    }
+  }
+}
