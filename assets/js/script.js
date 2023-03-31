@@ -13,6 +13,9 @@ function createPlayGround(){
     `
   }
 
+  setTimeout(numbersDisappear, 5000, numbersContainer);
+  setTimeout(inputAppear, 5250, inputContainer);
+}
 
 const getRandomNumber = () => Math.floor(Math.random() * 100) + 1;
 
@@ -24,3 +27,8 @@ function verifyRandomNumber(){
   }while(array.length !== 5)
   return array;
 }
+
+function numbersDisappear(numbersContainer){
+  numbersContainer.classList.add("opacity-0");
+}
+

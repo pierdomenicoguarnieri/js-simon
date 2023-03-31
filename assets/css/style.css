@@ -19,14 +19,30 @@ header img{
 
 .game-wrapper{
   display: flex;
+  flex-direction: column;
   height: 85%;
   overflow: scroll;
-  justify-content: center;
+  align-items: center;
   background-color: bisque;
   padding: 30px 0;
 }
 
-#btnPlay{
+.numbers-container{
+  font-size: 1.8rem;
+  padding: 20px 0;
+  opacity: 1;
+  transition: all .5s;
+}
+
+.numbers-container span{
+  padding: 0 20px;
+}
+
+.opacity-0{
+  opacity: 0;
+}
+
+.input{
   border: 3px solid green;
   border-radius: 5px;
   padding: 5px 10px;
@@ -36,7 +52,8 @@ header img{
   transition: all .3s;
 }
 
-#btnPlay:hover{
+
+.input:hover{
   background-color: green;
   color: white;
 }
