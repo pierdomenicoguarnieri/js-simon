@@ -2,6 +2,7 @@ const btnPlay = document.getElementById("btnPlay");
 
 const numbersContainer = document.querySelector(".numbers-container");
 
+const inputContainer = document.querySelector(".input-container");
 
 btnPlay.addEventListener("click", createPlayGround)
 
@@ -32,3 +33,6 @@ function numbersDisappear(numbersContainer){
   numbersContainer.classList.add("opacity-0");
 }
 
+function inputAppear(inputAppear){
+  inputAppear.classList.remove("opacity-0");
+}
