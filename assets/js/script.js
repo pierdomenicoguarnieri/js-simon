@@ -1,10 +1,20 @@
 const btnPlay = document.getElementById("btnPlay");
 
+const btnSend = document.getElementById("send");
+
 const numbersContainer = document.querySelector(".numbers-container");
 
 const inputContainer = document.querySelector(".input-container");
 
-btnPlay.addEventListener("click", createPlayGround)
+const outputContainer = document.querySelector(".output-container");
+
+let generatedNumbers = [];
+
+let guessedNumbers = 0;
+
+btnPlay.addEventListener("click", createPlayGround);
+
+btnSend.addEventListener("click", gameResult);
 
 function createPlayGround(){
   const generatedNumbers = verifyRandomNumber(numbersContainer);
@@ -16,6 +26,19 @@ function createPlayGround(){
 
   setTimeout(numbersDisappear, 5000, numbersContainer);
   setTimeout(inputAppear, 5250, inputContainer);
+}
+
+function gameResult(){
+  const inputArray = []
+  for(let i = 0; i < 5; i++){
+  const input = document.getElementById("input" + (i + 1));
+  if(!inputArray.includes(parseInt(input.value)))inputArray.push(parseInt(input.value));
+  }
+  const outputMessage = document.createElement("h1");
+
+  arrayCheck(inputArray, outputMessage)
+
+  outputContainer.append(outputMessage);
 }
 
 const getRandomNumber = () => Math.floor(Math.random() * 100) + 1;
