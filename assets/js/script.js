@@ -17,7 +17,7 @@ btnPlay.addEventListener("click", createPlayGround);
 btnSend.addEventListener("click", gameResult);
 
 function createPlayGround(){
-  const generatedNumbers = verifyRandomNumber(numbersContainer);
+  generatedNumbers = verifyRandomNumber(numbersContainer);
   for(let i = 0; i < generatedNumbers.length; i++){
     numbersContainer.innerHTML +=`
     <span>${generatedNumbers[i]}</span>
