@@ -1,0 +1,53 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.main-wrapper{
+  height: 100vh;
+}
+
+header{
+  height: 7.5%;
+}
+
+header img{
+  height: 100%;
+  padding-left: 20px;
+}
+
+.game-wrapper{
+  display: flex;
+  height: 85%;
+  overflow: scroll;
+  justify-content: center;
+  background-color: bisque;
+  padding: 30px 0;
+}
+
+#btnPlay{
+  border: 3px solid green;
+  border-radius: 5px;
+  padding: 5px 10px;
+  font-size: 1.5rem;
+  background-color: transparent;
+  cursor: pointer;
+  transition: all .3s;
+}
+
+#btnPlay:hover{
+  background-color: green;
+  color: white;
+}
+
+footer{
+  height: 7.5%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+footer span{
+  font-size: 1.5rem;
+}
